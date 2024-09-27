@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 25px;
+  }
+  
+  .song-card {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .song-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cover-img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .song-title {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .artist-name {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .play-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .play-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    bottom: 20px;
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(18px);
+    width: 300px;
+    border-radius: 7px;
+    padding: 25px 10px;
+    margin: 5% 12%;
+    display: none;
+    animation: appear 1.5s linear;
+}
+
+@keyframes appear {
+
+  from{
+    opacity: 0;
+    transform: translateY(5%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  
+}
+
+.info{
+  font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ccc;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0%; /* This width can be dynamically changed using JavaScript */
+    border-radius: 5px;
+}
+
+.time-display {
+    margin-top: 5px;
+    font-size: 14px;
+}
+  
