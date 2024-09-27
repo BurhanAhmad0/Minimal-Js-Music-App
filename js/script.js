@@ -55,44 +55,44 @@ async function fetchAPIsongs(query) {
     }
 }
 
-async function fetchSongs() {
+// async function fetchSongs() {
 
-    let api = await fetch('http://127.0.0.1:5501/songs/')
-    let response = await api.text()
+//     let api = await fetch('http://127.0.0.1:5501/songs/')
+//     let response = await api.text()
 
-    // console.log(response)
+//     // console.log(response)
 
-    let div = document.createElement("div")
-    div.innerHTML = response
+//     let div = document.createElement("div")
+//     div.innerHTML = response
 
-    // console.log(fetchedSongs)
+//     // console.log(fetchedSongs)
 
-    let anchors = div.getElementsByTagName('a')
+//     let anchors = div.getElementsByTagName('a')
 
-    // console.log(anchors)
+//     // console.log(anchors)
 
-    let songNames = []
-    // console.log(songNames)
-    let songs = []
-    // console.log(songs)
+//     let songNames = []
+//     // console.log(songNames)
+//     let songs = []
+//     // console.log(songs)
 
-    for (let index = 0; index < anchors.length; index++) {
-        const element = anchors[index];
+//     for (let index = 0; index < anchors.length; index++) {
+//         const element = anchors[index];
 
-        // console.log(element.href)
+//         // console.log(element.href)
 
-        if (element.href.endsWith('.mp3')) {
-            // console.log(element.href)
+//         if (element.href.endsWith('.mp3')) {
+//             // console.log(element.href)
 
-            songs.push(element.href)
-            songNames.push(element.href.split('/songs/')[1].replace(".mp3", ""))
-        }
+//             songs.push(element.href)
+//             songNames.push(element.href.split('/songs/')[1].replace(".mp3", ""))
+//         }
         
-    }    
+//     }    
 
-    return [songs, songNames]
+//     return [songs, songNames]
     
-}
+// }
 
 function songPlay() {
 
@@ -169,29 +169,29 @@ function songPlay() {
 
 async function main() {
 
-    let [songs, songNames] = await fetchSongs()
+    // let [songs, songNames] = await fetchSongs()
     // console.log(songs)
     // console.log(songNames)
 
-    let container = document.querySelector('.container')
+    // let container = document.querySelector('.container')
     // console.log(container)
 
-    for (let index = 0; index < songNames.length; index++) {
-        const songName = songNames[index];
-        const song = songs[index];
+    // for (let index = 0; index < songNames.length; index++) {
+    //     const songName = songNames[index];
+    //     const song = songs[index];
 
-        let songCard = `<div class="song-card" data-song=${song}>
-                            <img src="./icons/music.svg" alt="Song Cover" class="cover-img" />
-                            <div class="song-info">
-                            <h3 class="song-title">${songName}</h3>
-                            <p class="artist-name">Artist Name</p>
-                            <button class="play-btn">Play</button>
-                            </div>
-                        </div>`  
+    //     let songCard = `<div class="song-card" data-song=${song}>
+    //                         <img src="./icons/music.svg" alt="Song Cover" class="cover-img" />
+    //                         <div class="song-info">
+    //                         <h3 class="song-title">${songName}</h3>
+    //                         <p class="artist-name">Artist Name</p>
+    //                         <button class="play-btn">Play</button>
+    //                         </div>
+    //                     </div>`  
 
-        container.innerHTML = container.innerHTML + songCard
+    //     container.innerHTML = container.innerHTML + songCard
         
-    }
+    // }
 
     // Call the function with a search query, for example, "eminem"
     let [songTitles, songArtists, songCovers, song] = await fetchAPIsongs('Young Stunners');
