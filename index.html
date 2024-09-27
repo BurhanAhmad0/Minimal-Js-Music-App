@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olan Short Track | Minimal Music App</title>
 
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olan Short Track | Minimal Music App</title>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-79XMJNCCGT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-79XMJNCCGT');
+  </script>
 </head>
+
 <body>
 
-    <div class="container">
+  <div class="container">
 
-      <!-- <div class="song-card">
+    <!-- <div class="song-card">
         <img src="./icons/music.svg" alt="Song Cover" class="cover-img" />
         <div class="song-info">
           <h3 class="song-title">Song Title</h3>
@@ -21,24 +33,25 @@
         </div>
       </div>   -->
 
-    </div>    
-
-
-    <div id="player" class="player">
-      <div class="info">
-        <span>Song - Artist Name</span>
-      </div>
-      <!-- Progress bar container -->
-      <div class="progress-container">
-          <div id="progress-bar" class="progress-bar"></div>
-      </div>
-
-      <!-- Display current time and total duration (static for now) -->
-      <div class="time-display">
-          <span id="currTime">00:00</span> / <span id="totalTime">00:00</span>
-      </div>
   </div>
-    
-      <script src="./js/script.js"></script>
+
+
+  <div id="player" class="player">
+    <div class="info">
+      <span>Song - Artist Name</span>
+    </div>
+    <!-- Progress bar container -->
+    <div class="progress-container">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <!-- Display current time and total duration (static for now) -->
+    <div class="time-display">
+      <span id="currTime">00:00</span> / <span id="totalTime">00:00</span>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
