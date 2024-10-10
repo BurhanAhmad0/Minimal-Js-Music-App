@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar{
+    background-color: #5c92c2;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb{
+    background-color: #7db0de;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb:hover{
+    background-color: #5083b0;
+}
+
+.no-scrollbar::-webkit-scrollbar-button{
+    display: none;
+}

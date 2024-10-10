@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olan Short Track | Minimal Music App</title>
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="shortcut icon" href="./favicon/favicon.png" type="image/x-icon">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-79XMJNCCGT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-79XMJNCCGT');
+  </script>
+</head>
+
+<body class="bg-[#12395d]">
+
+  <nav class="nav-bar p-2 flex items-center justify-around w-full">
+
+    <div class="logo text-4xl font-bold w-[50px]">
+      <a href="#"><img src="./assets/logo.png" alt="Olan Track Logo"></a>
+    </div>
+
+
+    <form class="search-form relative flex justify-center items-center w-[25%]" id="searchForm">
+
+      <input
+        class="rounded-full w-[100%] px-[40px] font-medium bg-white bg-opacity-[0.5] py-[6px] mx-auto outline-none transition-all duration-100 placeholder:text-gray-600 text-lg focus:border-[2px] border-white"
+        type="search" placeholder="Search" name="search" id="search">
+      <img class="absolute top-[9px] left-[7px]" src="./assets/icons/search-icon.svg" alt="search">
+
+    </form>
+
+    <ul class="nav-links flex justify-center items-center gap-5">
+      <li class="bg-[#7db0de] py-[8px] w-[100px] text-center bg-opacity-[0.95] rounded-full font-bold text-white"><a href="#">Sign up</a></li>
+      <li class="bg-[#7db0de] py-[8px] w-[100px] text-center bg-opacity-[0.95] rounded-full font-bold text-white"><a href="#">Log in</a></li>
+    </ul>
+
+  </nav>
+
+  <section class="search-form display-songs px-3 h-[87vh] flex justify-center gap-[10px]">
+
+    <aside class="hidden slg:block playlist-container w-[30%] rounded-lg bg-[#7db0de] bg-opacity-[0.2]">
+
+      <div class="heading text-[#7db0de] flex items-center p-[15px]">
+        <img src="./assets/icons/playlist.svg" alt="playlist">
+        <span class="mx-[20px] font-bold">Your Playlists</span>
+      </div>
+
+    </aside>
+
+    <article class="w-fit rounded-l-lg bg-[#7db0de] overflow-x-auto bg-opacity-[0.4] overflow-y-scroll no-scrollbar">
+
+      <div class="artists-intro bg-[#12395d] bg-opacity-[0.4] h-[250px] p-5 m-4 rounded-lg flex flex-col justify-center">
+
+        <div class="heading my-2">
+          <span class="text-3xl font-bold">Artists</span>
+        </div>
+
+        <div class="artists flex items-center my-2 gap-5">
+          <div class="box bg-[#7db0de] bg-opacity-[0.4] w-[150px] h-[150px] rounded-full flex items-center justify-center">
+            Box
+          </div>
+        </div>
+
+      </div>
+
+      <div
+      class="song-container w-[100%] h-[100%] p-4 flex flex-wrap justify-center items-center gap-[20px]">
+
+      <!-- Song Cards Will Be Shown Here On Web Browser -->
+
+      </div>
+
+    </article>
+
+  </section>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
